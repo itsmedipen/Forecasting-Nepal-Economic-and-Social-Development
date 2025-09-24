@@ -1,0 +1,26 @@
+# Ignore virtual environments
+venv/
+.env/
+
+myenv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore model and vectorizer files (you can keep them local or store on cloud)
+
+# Ignore logs
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Streamlit cache
+.streamlit/
