@@ -79,7 +79,7 @@ with st.container(border=True):
     st.subheader("🗓️ Select Prediction Date")
     
     # Use columns to position the date picker and button efficiently
-    col_date, col_button, col_spacer = st.columns([1.5, 0.8, 2.5])
+    col_date, col_button, col_spacer = st.columns([1.5, 1, 2.5])
 
     with col_date:
         # Default the date input to a year in the near future for better UX
