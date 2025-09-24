@@ -78,8 +78,8 @@ st.markdown("---")
 with st.container(border=True):
     st.subheader("🗓️ Select Prediction Date")
     
-    # Use columns to position the date picker and button efficiently
-    col_date, col_button, col_spacer = st.columns([1.5, 1, 2.5])
+    # Use columns with vertical_alignment="bottom" for perfect alignment
+    col_date, col_button, col_spacer = st.columns([1.5, 1, 2.5], vertical_alignment="bottom")
 
     with col_date:
         # Default the date input to a year in the near future for better UX
@@ -88,10 +88,10 @@ with st.container(border=True):
         " format - Year/01/01 (Max 10 years ahead):", default_date)
 
     with col_button:
-        # Add some vertical space to align the button with the date input
-        st.markdown("<br>", unsafe_allow_html=True)
+        # No need for st.write('') spacer now
         predict_button = st.button(
-            "🧠 Generate Forecast",type='primary', 
+            "🧠 Generate Forecast",
+            type='primary', 
             use_container_width=True
         )
 
