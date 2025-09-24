@@ -76,7 +76,7 @@ st.markdown("---")
 
 # --- Prediction Input Area (Using st.container for visual grouping) ---
 with st.container(border=True):
-    st.subheader("🗓️ Select Prediction Date")
+    st.subheader("Select Prediction Date")
     
     # Use columns with vertical_alignment="bottom" for perfect alignment
     col_date, col_button, col_spacer = st.columns([1.5, 1, 2.5], vertical_alignment="bottom")
@@ -84,7 +84,7 @@ with st.container(border=True):
     with col_date:
         # Default the date input to a year in the near future for better UX
         default_date = datetime(2030, 1, 1).date()
-        date = st.date_input("Select a future year" \
+        date = st.date_input("⌛ Select a future year" \
         " format - Year/01/01 (Max 10 years ahead):", default_date)
 
     with col_button:
@@ -97,8 +97,8 @@ with st.container(border=True):
 
 # --- Results Area ---
 if predict_button:
-    st.markdown("## 📊 Forecast Results")
-    st.info(f"Displaying predictions for **{date.strftime('%Y-%m-%d')}**")
+    st.markdown("## Forecast Results")
+    st.info(f" ⚡ Forecasting for **{date.strftime('%Y-%m-%d')}**")
     
     results = predict_for_date(date)
 
